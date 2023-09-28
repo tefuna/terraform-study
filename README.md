@@ -6,4 +6,6 @@
 3. install git bash
 4. install tfenv -> terraform
 5. install git-secrets
-6.
+
+## 便利
+- gitignore.io
