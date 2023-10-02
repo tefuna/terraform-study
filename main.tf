@@ -9,6 +9,20 @@ terraform {
       version = "~>5.18"
     }
   }
+
+  # backend "s3" {
+  #   bucket  = "tastylog-tsstate-bucket-tfunayama"
+  #   key     = "tastylog-dev.tfstate"
+  #   region  = "ap-northeast-1"
+  #   profile = "terraform"
+  # }
+  cloud {
+    organization = "aws_isid_learn145"
+    hostname     = "app.terraform.io"
+    workspaces {
+      name = "terraform-study"
+    }
+  }
 }
 
 # -----------------------------------------------------------------------------
