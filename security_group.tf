@@ -113,6 +113,15 @@ resource "aws_security_group_rule" "opmng_in_ssh" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
+resource "aws_security_group_rule" "opmng_in_ssh10022" {
+  security_group_id = aws_security_group.opmng_sg.id
+  type              = "ingress"
+  protocol          = "tcp"
+  from_port         = 10022
+  to_port           = 10022
+  cidr_blocks       = ["0.0.0.0/0"]
+}
+
 resource "aws_security_group_rule" "opmng_in_tcp3000" {
   security_group_id = aws_security_group.opmng_sg.id
   type              = "ingress"

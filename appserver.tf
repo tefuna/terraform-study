@@ -56,6 +56,7 @@ resource "aws_instance" "app_server" {
   iam_instance_profile        = aws_iam_instance_profile.app_ec2_profile.name
   vpc_security_group_ids      = [aws_security_group.app_sg.id, aws_security_group.opmng_sg.id]
   key_name                    = aws_key_pair.keypair.key_name
+  user_data                   = file("./src/userdata/appserver.sh")
 
   tags = {
     Name    = "${var.project}-${var.environment}-app-ec2"

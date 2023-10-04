@@ -43,5 +43,3 @@ variable "project" {
 variable "environment" {
   type = string
 }
-
-# TODO tsstate move to terraform cloud
