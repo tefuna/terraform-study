@@ -8,15 +8,15 @@ data "aws_ami" "app" {
 
   filter {
     name   = "name"
-    values = ["tastylog-app-ami"]
+    values = ["tastylog-*-ami"]
   }
-  filter {
-    name   = "root-device-type"
-    values = ["ebs"]
-  }
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
+  # filter {
+  #   name   = "root-device-type"
+  #   values = ["ebs"]
+  # }
+  # filter {
+  #   name   = "virtualization-type"
+  #   values = ["hvm"]
+  # }
 
 }
